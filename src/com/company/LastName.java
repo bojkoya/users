@@ -3,7 +3,7 @@ package com.company;
 /**
  * Created by yboiko on 15.08.18.
  */
-public enum lastName {
+public enum LastName {
     Boiko(0),
     Khomenko(1),
     Kunin(2),
@@ -13,7 +13,7 @@ public enum lastName {
 
     int value;
 
-    lastName(int value) {
+    LastName(int value) {
         this.value = value;
     }
 }

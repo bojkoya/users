@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * Created by yboiko on 15.08.18.
  */
-public class Student extends User{
+public class Student extends User {
 
     private enum Group {
         JAVA(0),
@@ -16,18 +16,17 @@ public class Student extends User{
         FRONTEND(5);
 
         int value;
-
-        Group(int value){
+        Group(int value) {
             this.value = value;
         }
 
 
     }
+
     private Group group;
     private static Random random = new Random();
 
     public Student() {
-        new User();
         switch (this.group = Group.values()[random.nextInt(Group.values().length)]) {
         }
     }
@@ -35,9 +34,9 @@ public class Student extends User{
     @Override
     public int compareTo(User user) {
         int result = 0;
-        if(user instanceof Student) {
+        if (user instanceof Student) {
             result = Integer.compare(group.value, ((Student) user).group.value);
-            if(result == 0) {
+            if (result == 0) {
                 result = super.compareTo(user);
             }
         }
